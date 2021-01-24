@@ -10,55 +10,34 @@
 ]]
 
 local Players = game:GetService("Players")
-local MetaTable = getrawmetatable(Players.LocalPlayer)
-local OldNameCall = MetaTable.__namecall
-local OldIndex = MetaTable.__index
+local GameMetaTable = getrawmetatable(game)
+local OldNameCall = GameMetaTable.__namecall
+local OldIndex = GameMetaTable.__index
 
 _G.SendNotifications = true -- Set to true if you want to get notified regularly.
 
-make_writeable(MetaTable)
+setreadonly(GameMetaTable, false)
 
-MetaTable.__namecall = newcclosure(function(Self, Index, Key)
+GameMetaTable.__namecall = newcclosure(function(Self, ...)
     local NameCallMethod = getnamecallmethod()
 
-    if type(NameCallMethod) == "string" then
-        if tostring(string.lower(NameCallMethod)) == "kick" then
-            if _G.SendNotifications == true then
-                game:GetService("StarterGui"):SetCore("SendNotification",{
-                    Title = "Ubicast Developer";
-                    Text = "You almost got kicked! Successfully prevented.";
-                    Icon = "rbxassetid://6238540373";
-                    Duration = 3;
-                })
-            end
-            
-            return nil
+    if tostring(string.lower(NameCallMethod)) == "kick" then
+        if _G.SendNotifications == true then
+            game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Ubicast Developer";
+                Text = "You almost got kicked! Successfully prevented.";
+                Icon = "rbxassetid://6238540373";
+                Duration = 3;
+            })
         end
+        
+        return nil
     end
     
-    return OldNameCall(Self, Index, Key)
+    return OldNameCall(Self, ...)
 end)
 
-MetaTable.__index = newcclosure(function(Self, Index, Key)
-    if type(Index) == "string" then
-        if tostring(string.lower(Index)) == "kick" then
-            if _G.SendNotifications == true then
-                game:GetService("StarterGui"):SetCore("SendNotification",{
-                    Title = "Ubicast Developer";
-                    Text = "You almost got kicked! Successfully prevented.";
-                    Icon = "rbxassetid://6238540373";
-                    Duration = 3;
-                })
-            end
-            
-            return nil
-        end
-    end
-
-    return OldIndex(Self, Index, Key)
-end)
-
-make_readonly(MetaTable)
+setreadonly(GameMetaTable, true)
 
 if _G.SendNotifications == true then
     game:GetService("StarterGui"):SetCore("SendNotification",{
