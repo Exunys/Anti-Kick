@@ -9,7 +9,7 @@ This script prevents you from being kicked after being detected by an Anti Cheat
 
 ### Script
 
-Load the script by using the code below or by copying it from [here](https://github.com/ExunysDev/Anti-Kick/blob/main/Anti%20Kick.lua).
+Load the script by using the code below or by copying it from [here](https://github.com/Exunys/Anti-Kick/blob/main/Anti%20Kick.lua).
 ```lua
 loadstring(game:HttpGet("https://pastebin.com/raw/gsxvWvnj"))()
 ```
