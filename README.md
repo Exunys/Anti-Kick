@@ -5,7 +5,7 @@ This script prevents you from being kicked after being detected by an Anti Cheat
 
 ## ***WARNING***
 
-**Please note that this script can only prevent kicks that happen on the client, meaning if you are being kicked by the server then the script cannot prevent that because ROBLOX does not send information from the server to your client. The only reason why it is possible to prevent a kick on the client is because the client has access to the `rawmetatable` of the game and the services.**
+**Please note that this script can only prevent kicks that happen on the client, meaning if you are being kicked by the server then the script cannot prevent that because ROBLOX does not send information from the server to your client. The only reason why it is possible to prevent a kick on the client is because the client has access to the raw metatable of the game and the services which allows us to hook and add metamethods to the raw metatable of the game or service.**
 
 ### Script
 
@@ -16,5 +16,5 @@ loadstring(game:HttpGet("https://pastebin.com/raw/gsxvWvnj"))()
 
 ## Contact information
 
-- Discord : [Aleksandar](https://discord.com/users/611111398818316309)
-- ROBLOX : [Ubicast](https://www.roblox.com/users/330279990/profile)
+- Discord : [Exunys](https://discord.com/users/611111398818316309)
+- ROBLOX : [Exunys](https://www.roblox.com/users/330279990/profile)
