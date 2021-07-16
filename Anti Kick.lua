@@ -1,7 +1,6 @@
 --// Variables
 
 local Players = game:GetService("Players")
-local GameMetaTable = getrawmetatable(game)
 local OldNameCall = nil
 
 --// Global Variables
