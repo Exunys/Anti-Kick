@@ -1,6 +1,6 @@
 --// Cache
 
-local getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller = getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller
+local getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, stringlower = getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, string.lower
 
 --// Loaded check
 
@@ -20,7 +20,7 @@ getgenv().ED_AntiKick = {
 --// Main
 
 OldNamecall = hookmetamethod(game, "__namecall", newcclosure(function(...)
-	if (getgenv().ED_AntiKick.CheckCaller and not checkcaller() or true) and getnamecallmethod() == "Kick" then
+	if (getgenv().ED_AntiKick.CheckCaller and not checkcaller() or true) and stringlower(getnamecallmethod()) == "kick" then
 		if getgenv().ED_AntiKick.SendNotifications then
 			StarterGui:SetCore("SendNotification", {
 				Title = "Exunys Developer",
