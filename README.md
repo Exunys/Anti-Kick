@@ -16,5 +16,5 @@ loadstring(game:HttpGet("https://pastebin.com/raw/gsxvWvnj"))()
 
 ## Contact information
 
-- Discord : [Exunys](https://discord.com/users/611111398818316309)
-- ROBLOX : [Exunys](https://www.roblox.com/users/330279990/profile)
+- [Discord](https://discord.com/users/611111398818316309)
+- [E-Mail](mailto:exunys@gang.email)
