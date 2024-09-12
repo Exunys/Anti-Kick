@@ -21,7 +21,7 @@ end
 local Players, LocalPlayer, StarterGui = cloneref(game:GetService("Players")), cloneref(game:GetService("Players").LocalPlayer), cloneref(game:GetService("StarterGui"))
 
 local SetCore = clonefunction(StarterGui.SetCore)
-local GetDebugId = clonefunction(game.GetDebugId)
+--local GetDebugId = clonefunction(game.GetDebugId)
 local FindFirstChild = clonefunction(game.FindFirstChild)
 
 local CompareInstances = (CompareInstances and function(Instance1, Instance2)
@@ -31,7 +31,7 @@ local CompareInstances = (CompareInstances and function(Instance1, Instance2)
 	end)
 or
 function(Instance1, Instance2)
-	return (typeof(Instance1) == "Instance" and typeof(Instance2) == "Instance") and GetDebugId(Instance1) == GetDebugId(Instance2)
+	return (typeof(Instance1) == "Instance" and typeof(Instance2) == "Instance")-- and GetDebugId(Instance1) == GetDebugId(Instance2)
 end
 
 local CanCastToSTDString = function(...)
