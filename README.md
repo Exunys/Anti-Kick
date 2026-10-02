@@ -1,4 +1,4 @@
-# Anti-Kick
+# Anti-Kick [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=Exunys.Anti-Kick)](https://github.com/Exunys/Anti-Kick)
 ### About
 
 This script can only stop kicks that happen on the client, meaning the script wouldn't intercept server sided kicks.
