@@ -13,4 +13,4 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Anti-Kick/main
 ## Contact information
 
 - [Discord](https://discord.com/users/611111398818316309)
-- [E-Mail](mailto:exunys@gang.email)
+- [E-Mail](mailto:exunys@gmail.com)
